@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessible Resume Builder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Accessible Resume Builder</h1>
+
+  <main class="container">
+    <!-- Form -->
+    <section class="form-section">
+      <form id="resumeForm">
+        <h2>Basic Info</h2>
+        <label>
+          Full Name:
+          <input type="text" id="fullName" required />
+        </label>
+        <label>
+          Title:
+          <input type="text" id="title" />
+        </label>
+        <label>
+          Email:
+          <input type="email" id="email" />
+        </label>
+        <label>
+          Phone:
+          <input type="tel" id="phone" />
+        </label>
+        <label>
+          Summary:
+          <textarea id="summary"></textarea>
+        </label>
+
+        <h2>Work Experience</h2>
+        <div id="workContainer"></div>
+        <button type="button" id="addWorkBtn">+ Add Work Experience</button>
+
+        <h2>Education</h2>
+        <div id="educationContainer"></div>
+        <button type="button" id="addEducationBtn">+ Add Education</button>
+      </form>
+
+      <div class="actions">
+        <button id="saveBtn">Save</button>
+        <button id="loadBtn">Load</button>
+        <button id="exportPdfBtn">Export PDF</button>
+      </div>
+    </section>
+
+    <!-- Resume Preview -->
+    <section id="preview" class="preview-section" aria-live="polite"></section>
+  </main>
+
+  <script type="module" src="./dist/app.js"></script>
+</body>
+</html>
