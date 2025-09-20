@@ -1,3 +1,4 @@
+// Work experience item interface
 export interface WorkItem {
   company: string;
   role: string;
@@ -6,6 +7,7 @@ export interface WorkItem {
   description?: string;
 }
 
+// Education item interface
 export interface EducationItem {
   school: string;
   degree: string;
@@ -13,6 +15,7 @@ export interface EducationItem {
   end?: string;
 }
 
+// Complete resume data structure
 export interface ResumeData {
   fullName: string;
   title: string;
@@ -22,3 +25,6 @@ export interface ResumeData {
   work: WorkItem[];
   education: EducationItem[];
 }
+
+// Notification types for user feedback
+export type NotificationType = 'success' | 'error' | 'info';
